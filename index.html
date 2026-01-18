@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Manchanda </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Honk:MORF@15&family=Piedra&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Rye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #003363;
+            color: white;
+            font-family: "Chewy", system-ui;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 10px 10%;
+            height: 40px;
+            width: 80%;
+            border-radius: 30px;
+            background-color: #4685b9;
+            flex-wrap: wrap;
+            position: sticky;
+            position: sticky;
+            top: 0;
+            /* 👈 required */
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .right ul li a:hover {
+            text-decoration: underline;
+            color: #b893f1;
+            font-size: 1.02rem;
+            cursor: pointer;
+        }
+
+        .right {
+            font-size: 1.2rem;
+            margin-left: 0;
+        }
+
+
+        .left {
+            font-size: 1.7rem;
+        }
+
+        .Hero {
+            display: flex;
+            height: 100vh;
+            justify-content: space-around;
+            background: linear-gradient(to bottom,
+                    #003363 0%,
+                    #815bbb 70%);
+            /* background-image: url('herobg.avif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; */
+        }
+
+        .Hero .leftsection {
+            width: 60%;
+            justify-content: center;
+            font-size: 3rem;
+            text-align: left;
+            padding: 20vh 5rem;
+            font-family: "Rye", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .Hero .rightsection {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 425px) {
+            .hide-on-mobile {
+                display: none;
+            }
+        }
+
+        #element {
+            color: #a36dea;
+            font-weight: 700;
+            font-size: 3.5rem;
+            font-family: honk, cursive;
+        }
+
+        .btn-wrapper {
+            display: flex;
+            gap: 0px;
+        }
+
+        .btn {
+            margin: 1rem;
+            padding: 12px 24px;
+            font-size: 16px;
+            border: 2px solid #a36dea;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            background: transparent;
+            border-radius: 30px;
+        }
+
+        /* Transparent button */
+        .btn-transparent {
+            color: #fff;
+        }
+
+        .btn-transparent:hover {
+            background: #a36dea;
+
+        }
+
+        /* Filled button */
+        .btn-filled {
+            background: #a36dea;
+            color: #fff;
+        }
+
+        .btn-filled:hover {
+            background: transparent;
+            color: #fff;
+        }
+
+        /* Timeline section starts */
+        #secondsection {
+            height: 75vh;
+            background-color: #815bbb;
+            margin: auto;
+            /* display: flex; */
+            border-top: 4px dashed #003363;
+            justify-content: center;
+            /* font-family: 'Honk', sans-serif; */
+            border-bottom: 4px dashed #003363;
+
+        }
+
+        #secondsection h1 {
+            font-family: 'honk', italic;
+            margin-top: 2rem;
+            font-size: 7rem;
+            text-align: center;
+            color: #fff;
+        }
+
+        h1 {
+            font-family: 'honk', italic;
+            position: relative;
+            top: -30px;
+            font-size: 7rem;
+            text-align: center;
+
+        }
+
+        .box {
+            width: 100vh;
+            height: 4px;
+            margin: 100px 40vh;
+            background-color: white;
+            display: flex;
+        }
+
+        .vertical {
+            height: 93px;
+            width: 4px;
+            background-color: white;
+            margin: 0 70px;
+            font-family: 'Kaushan Script', sans-serif;
+        }
+
+        .image-top {
+            width: 40px;
+            height: 40 px;
+            position: relative;
+            top: -45px;
+            left: -15px;
+        }
+
+        .ver-title {
+            position: relative;
+            top: 50px;
+            left: -30px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .ver-text {
+            position: relative;
+            top: 55px;
+            left: -25px;
+            width: 100px;
+            font-size: 12px;
+            font-weight: 400;
+            color: #003363;
+        }
+
+        #projects-section {
+            padding: 60px 40px;
+            font-family: sans-serif, bold;
+            background: linear-gradient(to bottom,
+                    #815bbb 20%, #003363 80%);
+        }
+
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        /* CARD */
+        .project-card {
+            background: #1c2b3a;
+            border-radius: 18px;
+            padding: 20px;
+            color: #e6ecf3;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* IMAGE */
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            /* FIXED HEIGHT */
+            object-fit: cover;
+            border-radius: 14px;
+            margin-bottom: 14px;
+        }
+
+        /* STATUS */
+        .status {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            font-size: 12px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .completed {
+            background: #a36dea;
+            color: #fff;
+        }
+
+        /* TEXT */
+        .title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .desc {
+            font-size: 14px;
+            line-height: 1.5;
+            opacity: 0.9;
+            margin-bottom: 14px;
+        }
+
+        /* TECH PILLS */
+        .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .project-card {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+        }
+
+
+        .tech span {
+            background: #24384d;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 12px;
+            color: #cfe1ff;
+        }
+
+        /* FEATURES */
+        .project-card h4 {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .project-card ul {
+            padding-left: 18px;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .project-card li {
+            margin-bottom: 6px;
+        }
+
+        /* LINKS */
+        .links {
+            margin-top: auto;
+            /* PUSH LINKS TO BOTTOM */
+            display: flex;
+            gap: 20px;
+        }
+
+        .links a {
+            color: #6cb6ff;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1000px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        #skills-section {
+            padding: 60px 20px;
+            background: #003363;
+            color: #fff;
+
+        }
+
+        .skills-title {
+            text-align: center;
+            font-size: 2.4rem;
+            margin-bottom: 30px;
+        }
+
+        .skills-card {
+            max-width: 1100px;
+            margin: auto;
+            background: #1f2d40;
+            padding: 30px;
+            border-radius: 16px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-family: sans-serif;
+        }
+
+        .bar {
+            height: 12px;
+            background: #32445c;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .fill {
+            height: 100%;
+            border-radius: 20px;
+        }
+
+        .purple {
+            background: linear-gradient(90deg, #7f5af0, #a855f7);
+        }
+
+        .green {
+            background: linear-gradient(90deg, #22c55e, #4ade80);
+        }
+
+        .teal {
+            background: linear-gradient(90deg, #14b8a6, #38bdf8);
+        }
+
+        .blue {
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+        }
+
+        .orange {
+            background: linear-gradient(90deg, #f97316, #ef4444);
+        }
+
+        .pink {
+            background: linear-gradient(90deg, #ec4899, #f43f5e);
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .right {
+                display: none;
+            }
+        }
+
+        /* CONTACT SECTION */
+        .contact-section {
+            padding: 20px 20px;
+            background: #022443;
+            color: #fff;
+        }
+
+        .contact-title {
+            text-align: center;
+            font-size: 2.4rem;
+            margin-bottom: 40px;
+            font-family: 'honk', sans-serif;
+        }
+
+        .contact-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-card {
+            background: #1f2d40;
+            padding: 30px;
+            border-radius: 16px;
+            font-family: sans-serif;
+        }
+
+        .contact-card h2 {
+            margin-top: 0;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        /* CONTACT INFO */
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        .contact-list li {
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            opacity: 0.95;
+        }
+
+        .contact-list i {
+            color: #815bbb;
+            font-size: 1.1rem;
+        }
+
+        /* SOCIAL ICONS */
+        .contact-socials {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .contact-socials a {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #2b3a4f;
+            border-radius: 50%;
+            color: #815bbb;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .contact-socials a:hover {
+            background: #815bbb;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        /* FORM */
+        .contact-form input,
+        .contact-form textarea {
+            width: 95%;
+            padding: 12px;
+
+            margin: 12px 0;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #815bbb;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            opacity: 0.9;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            #secondsection h1 {
+                font-size: 4rem;
+            }
+        }
+
+        footer {
+            background: #011930;
+            text-align: center;
+            font-family: 'reye', serif;
+            height: 50px;
+        }
+
+        .footer {
+            padding: 15px 0;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Ryan's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#aboutme">About Me</a></li>
+                    <li><a href="#projects-section">Projects</a></li>
+                    <li><a href="#skills-section">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="Hero">
+            <div class="leftsection">
+                Heyyy!!<br> My name is Ryan Manchanda! I'm a <br>
+                <span id="element"></span>
+
+                <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+                <script>
+
+                    var typed = new Typed('#element', {
+                        strings: ['FOUNDER', 'STUDENT', 'DEVELOPER', 'TECH ENTHUSIAST', 'INNOVATOR', 'SPEAKER', 'LIVER'],
+                        loop: true,
+                        typeSpeed: 50,
+                    });
+                </script>
+                <div class="btn-wrapper">
+                    <button class="btn btn-transparent">Contact Me</button>
+                    <a href="#projects-section"><button class="btn btn-filled">Projects</button></a>
+                </div>
+
+            </div>
+            <div class="rightsection">
+                <img src="hero.png" class="hide-on-mobile" alt="Hero Image"
+                    style="width:100%; height:85%; object-fit:contain; object-position: right;">
+            </div>
+        </section>
+
+
+        <!-- <section id="secondsection">
+            <h1>Timeline</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img src="school.png" class="image-top" alt="">
+                    <div class="ver-title">Schooling</div>
+                    <div class="ver-text">2010-2025</div>
+                </div>
+                <div class="vertical">
+                    <img src="school.png" class="image-top" alt="">
+                    <div class="ver-title">Schooling</div>
+                    <div class="ver-text">2010-2025</div>
+                </div>
+                <div class="vertical">
+                    <img src="school.png" class="image-top" alt="">
+                    <div class="ver-title">Schooling</div>
+                    <div class="ver-text">2010-2025</div>
+                </div>
+                <div class="vertical">
+                    <img src="school.png" class="image-top" alt="">
+                    <div class="ver-title">Schooling</div>
+                    <div class="ver-text">2010-2025</div>
+                </div>
+
+            </div>
+        </section> -->
+
+        <section id="projects-section">
+
+            <h1>Previous Projects</h1>
+            <div class="projects-grid">
+
+                <!-- CARD 1 -->
+                <div class="project-card">
+                    <span class="status completed">Completed</span>
+
+                    <img src="REVO.png" />
+
+                    <h3 class="title">Revo School Management Software</h3>
+                    <p class="desc">
+                        Next-generation school management platform with AI-powered insights.
+                    </p>
+
+                    <div class="tech">
+                        <span>Laravel</span>
+                        <span>Node.js</span>
+                        <span>HTML/CSS</span>
+                        <span>Flutter</span>
+                    </div>
+
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Attendance Teacher & Student </li>
+                        <li>Employee Management</li>
+                        <li>Fees Management</li>
+                        <li>Transport & Exam Management </li>
+                    </ul>
+
+                    <div class="links">
+
+                        <a href="https://revoschools.in">○ Live Demo</a>
+
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="project-card">
+                    <span class="status completed">Completed</span>
+
+                    <img src="nimbus.png" />
+
+                    <h3 class="title">Professional Coaching Academy Website</h3>
+                    <p class="desc">
+                        Complete digital solution for educational coaching institutes with modern design and
+                        comprehensive features.
+                    </p>
+
+                    <div class="tech">
+                        <span>React</span>
+                        <span>Tailwind CSS</span>
+                        <span>JavaScript</span>
+                        <span>Responsive</span>
+                    </div>
+
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Course Management</li>
+                        <li>Student Portal</li>
+                        <li>Responsive Design</li>
+                        <li>Modern UI/UX</li>
+                    </ul>
+
+                    <div class="links">
+                        <a href="https://nimbus-da.netlify.app/">○ Live Demo</a>
+                        <a href="https://github.com/RMlogic-coder/numbus.git">○ Source Code</a>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="project-card">
+
+                    <span class="status completed">Completed</span>
+
+                    <img src="gym.png" />
+
+                    <h3 class="title">Gym Membership Web Portal</h3>
+                    <p class="desc">
+                        Comprehensive gym management system with member dashboard. Auto Messaging system integrated.
+                    </p>
+
+                    <div class="tech">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Database</span>
+                        <span>Payments</span>
+                    </div>
+
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Membership Management</li>
+                        <li>Workout Tracking</li>
+                        <li>Payment Integration</li>
+                        <li>Member Dashboard</li>
+                    </ul>
+
+                    <div class="links">
+                        <a href="https://pulse-gym-nexus.lovable.app/">○ Live Demo</a>
+                        <a href="https://github.com/RMlogic-coder/pulse-gym-nexus.git">○ Source Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="status completed">Completed</span>
+
+                    <img src="EVENTO.png" />
+
+                    <h3 class="title">EventSphere - Event Manager & Planning App</h3>
+                    <p class="desc">
+                        Comprehensive event planning and management platform with booking system, coordination tools,
+                        and immersive VR previews
+                    </p>
+
+                    <div class="tech">
+                        <span>Real-time Updates</span>
+                        <span>Node.js</span>
+                        <span>Database</span>
+                        <span>Payments</span>
+                    </div>
+
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Membership Management</li>
+                        <li>Event Management</li>
+                        <li>Booking System</li>
+                        <li>Venue Booking</li>
+                    </ul>
+
+                    <div class="links">
+                        <a href="https://evento1.lovable.app/">○ Live Demo</a>
+                        <a href="https://github.com/RMlogic-coder/evento-party-planner-pro.git">○ Source Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="status completed">Completed</span>
+
+                    <img src="DAVINCI.png" />
+
+                    <h3 class="title">DaVinci Cafe Website</h3>
+
+                    <p class="desc">
+                        Elegant and modern cafe website designed to showcase menu items, enable online ordering, and
+                        provide a smooth customer experience.
+                    </p>
+
+                    <div class="tech">
+                        <span>React</span>
+                        <span>CSS Animations</span>
+                        <span>Menu Management</span>
+                        <span>Order System</span>
+                    </div>
+
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Digital Menu Showcase</li>
+                        <li>Online Ordering System</li>
+                        <li>Modern & Elegant UI</li>
+                        <li>Fully Mobile Responsive</li>
+                    </ul>
+
+                    <div class="links">
+                        <a href="https://davinci-cafe.lovable.app/">○ Live Demo</a>
+                        <a href="https://github.com/RMlogic-coder/davinci-cafe.git">○ Source Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="status completed">Completed</span>
+
+                    <img src="unique.png" />
+
+                    <h3 class="title">Unique School Website</h3>
+
+                    <p class="desc">
+                        Professional school website built to manage academic information, admissions, and student
+                        resources in one unified platform.
+                    </p>
+
+                    <div class="tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>School Management</span>
+                    </div>
+
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Academic Information Portal</li>
+                        <li>Online Admission System</li>
+                        <li>Student Resources Section</li>
+                        <li>Faculty & Staff Information</li>
+                    </ul>
+
+                    <div class="links">
+                        <a href="https://uniqueschool-studies.netlify.app/">○ Live Demo</a>
+                        <a href="https://github.com/RMlogic-coder/Uniques.git">○ Source Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="status completed">Completed</span>
+
+                    <img src="productivity.png" />
+
+                    <h3 class="title">Clazmate – Productivity Manager</h3>
+
+                    <p class="desc">
+                        Student-focused productivity and study management platform designed to improve focus,
+                        collaboration, and academic progress.
+                    </p>
+
+                    <div class="tech">
+                        <span>React</span>
+                        <span>Study Management</span>
+                        <span>Collaboration Tools</span>
+                        <span>Productivity Features</span>
+                    </div>
+
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Study Circles & Group Learning</li>
+                        <li>Task & Schedule Management</li>
+                        <li>Real-time Collaboration Tools</li>
+                        <li>Progress & Performance Tracking</li>
+                    </ul>
+
+                    <div class="links">
+                        <a href="http://clazmate-study.lovable.app/">○ Live Demo</a>
+                        <a href="#">○ Source Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="status completed">Completed</span>
+
+                    <img src="Suraya.png" />
+
+                    <h3 class="title">Suraya - Crowd Management System</h3>
+
+                    <p class="desc">
+                        Smart crowd management system designed to monitor, control, and optimize crowd flow for safer
+                        and more efficient public spaces.
+                    </p>
+
+                    <div class="tech">
+                        <span>Python</span>
+                        <span>YOLO V8</span>
+                        <span>HTML /CSS /JS</span>
+                        <span>Smart India Hackathon</span>
+                    </div>
+
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>ML Based Crowd Desity monitor</li>
+                        <li>Centralised Dashboard</li>
+                        <li>Different login pannels</li>
+                        <li>API Alerts</li>
+                    </ul>
+
+                    <div class="links">
+                        <a href="hhttps://surayacms.netlify.app">○ Live Demo</a>
+                        <a href="https://github.com/RMlogic-coder/suraya-crowd-pulse.git">○ Source Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="status completed">Completed</span>
+
+                    <img src="revoweb.png" />
+
+                    <h3 class="title">Revo - Official Site</h3>
+
+                    <p class="desc">
+                        Official corporate website showcasing Revo’s services, projects, and brand identity with a
+                        clean, professional digital presence.
+                    </p>
+
+                    <div class="tech">
+                        <span>HTML</span>
+                        <span>Tailwind CSS </span>
+                        <span>Java Script</span>
+                    </div>
+
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Simplest and proffesional UI</li>
+                        <li>Bold Branding</li>
+                        <li>impressive Company Statement</li>
+                        <li>Client Testimonials</li>
+                    </ul>
+
+                    <div class="links">
+                        <a href="https://revoweb.vercel.app/">○ Live Demo</a>
+                        <a href="https://github.com/RMlogic-coder/revoweb.git">○ Source Code</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="skills-section">
+            <h1>Skill shala</h1>
+
+            <div class="skills-card">
+                <div class="skills-grid">
+
+                    <div class="skill">
+                        <div class="skill-header">
+                            <span>Creative Problem Solving</span><span>95%</span>
+                        </div>
+                        <div class="bar">
+                            <div class="fill purple" style="width:95%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-header">
+                            <span>Full-Stack Development</span><span>90%</span>
+                        </div>
+                        <div class="bar">
+                            <div class="fill blue" style="width:90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-header">
+                            <span>Leadership & Mentoring</span><span>88%</span>
+                        </div>
+                        <div class="bar">
+                            <div class="fill green" style="width:88%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-header">
+                            <span>Public Speaking</span><span>92%</span>
+                        </div>
+                        <div class="bar">
+                            <div class="fill orange" style="width:92%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-header">
+                            <span>Content Creation</span><span>85%</span>
+                        </div>
+                        <div class="bar">
+                            <div class="fill teal" style="width:85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-header">
+                            <span>Community Building</span><span>87%</span>
+                        </div>
+                        <div class="bar">
+                            <div class="fill pink" style="width:87%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="contact-section" id="contact">
+            <h1>Get in Touch</h1>
+
+            <div class="contact-grid">
+                <!-- CONTACT INFO -->
+                <div class="contact-card">
+                    <h2>Contact Info</h2>
+                    <p>Let’s build something meaningful together.</p>
+
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-envelope"></i> ryaanmanchanda2007@gmail.com</li>
+                        <li><i class="fa-solid fa-phone"></i> +91 9501453725</li>
+                        <li><i class="fa-solid fa-location-dot"></i> India</li>
+                    </ul>
+
+                    <div class="contact-socials">
+                        <a href="https://github.com/yourusername" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://instagram.com/yourusername" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/yourusername" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CONTACT FORM -->
+                <div class="contact-card">
+                    <h2>Send a Message</h2>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name">
+                        <input type="email" placeholder="Your Email">
+                        <textarea rows="4" placeholder="Your Message"></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <footer>
+        <p class="footer">Building impactful digital experiences. © 2026 Ryan Manchanda. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
